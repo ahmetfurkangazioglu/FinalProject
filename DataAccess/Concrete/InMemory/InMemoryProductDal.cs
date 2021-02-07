@@ -33,7 +33,6 @@ namespace DataAccess.Concrete.InMemory
 
         public List<Product> GetAll()
         {
-
             return _product;
         }
 
