@@ -33,7 +33,7 @@ namespace Business.Concrete
 
         public IDataResult< List<Product>> GetAll()
         {
-            if (DateTime.Now.Hour==21)
+            if (DateTime.Now.Hour==22)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTimer);
             }
@@ -42,12 +42,12 @@ namespace Business.Concrete
 
         public IDataResult< List<Product>> GetAllByCategoryId(int id)
         {
-            return new SuccessDataResult<List<Product>> (_ProductDal.GetAll(p => p.CategoryId == id));
+            return new SuccessDataResult<List<Product>> (_ProductDal.GetAll(p => p.CategoryId == id), Messages.ProductsListed);
 
         }
         public IDataResult<Product> GetById(int productId)
         {
-            return new SuccessDataResult<Product>( _ProductDal.Get(p => p.ProductId == productId));
+            return new SuccessDataResult<Product>( _ProductDal.Get(p => p.ProductId == productId), Messages.ProductsListed);
         }
         public IDataResult< List<Product>> GetAllByUnitPrice(decimal min, decimal max)
         {
