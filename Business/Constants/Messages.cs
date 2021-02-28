@@ -6,9 +6,12 @@ namespace Business.Constants
 {
     public static class Messages
     {
-        public static string ProductAdded = "Product Added";
-        public static string ProductNameInvalid = "product name cannot be less than 3";
-        internal static string MaintenanceTimer = "system is under maintenance";
-        internal static string ProductsListed = "Product Listed";
+        public static string ProductAdded = "Ürün eklendi";
+        public static string ProductNameInvalid = "Ürünün ismi 3'ten küçük olamaz";
+        public static string MaintenanceTimer = "Sistem bakımda";
+        public static string ProductsListed = "Ürün listelendi";
+        public static string ProductCountOfCategoryError = "Ürünün kategorisi 10 adetten fazla olamaz";
+        public static string ProductNameAlreadyExist = "Bu isimde zaten başka bir ürün var";
+        public static string CategoryLimitExceded = "Kategori limiti aşıldı";
     }
 }
