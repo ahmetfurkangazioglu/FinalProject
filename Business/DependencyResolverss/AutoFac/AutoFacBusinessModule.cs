@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Business.DependencyResolvers.AutoFac
+namespace Business.DependencyResolverss.AutoFac
 {
    public class AutoFacBusinessModule:Module
     {
@@ -28,9 +28,7 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 
             builder.RegisterType<AuthManager>().As<IAuthService>();
-            builder.RegisterType<JwtHelper>().As<ITokenHelper>();
-
-            builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>();
+            builder.RegisterType<JwtHelper>().As<ITokenHelper>();          
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
